@@ -69,8 +69,13 @@ public:
         }
     }
     bool isempty()
-    {
-        return (qsize==0);
+    {   if(qsize==0)
+        {return true;
+        rare=0;
+        }
+        else
+            return false;
+
     }
     void clear()
     {
@@ -104,7 +109,7 @@ public:
 void functions_of_array_queue()
 {
 
-    array_queue<int> q;
+    array_queue<int> q(5);
     q.enqueue(10);
     q.enqueue(20);
     q.enqueue(30);
@@ -114,6 +119,8 @@ void functions_of_array_queue()
     q.print();
     auto  deleted=q.dequeue();
     cout<<"\nthe first element -->"<<deleted<<"<-- in the queue is deleted\n";
+    q.enqueue(40);
+    q.enqueue(50);
     cout<<"\nthe current values in the queue array based: \n";
     q.print();
     auto first_ele=q.first();

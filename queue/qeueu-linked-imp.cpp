@@ -30,12 +30,8 @@ public:
             front = newnode;
             rear = newnode;
         } else {
-            node<t>*temp=front;
-            while(temp!=rear)
-            {
-                temp=temp->next;
-            }
-            temp->next=newnode;
+
+            rear->next=newnode;
             rear=newnode;
         }
         queuesize++;
