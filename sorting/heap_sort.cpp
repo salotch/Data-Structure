@@ -31,7 +31,7 @@ void heap_sort(int *arr, int s)
 }
 int main()
 {
-    int *arr=new int[6]{20,80,50,30,90,10};
+    int *arr=new int[6]{20,8,50,30,90,10};
     heap_sort(arr,6);
     for (int i = 0; i < 6; ++i) {
        cout<<arr[i]<<" ";
