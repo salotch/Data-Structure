@@ -75,8 +75,9 @@ void in_help( node<t>* temp)
         }
         else
         { node<t>*temp=r->left;
-            while(temp->left!=NULL)
-                temp=temp->left;
+
+            while(temp->right!=NULL)
+                temp=temp->right;
             r->data=temp->data;
             r->left= delete_helper(r->left,temp->data);
         }
@@ -210,11 +211,13 @@ int main(){
     BST<int> b;
     cout<<b.get_height()<<endl;
 
-    b.append(6);
-    b.append(3);
-    b.append(9);
     b.append(10);
-    b.append(25);
+    b.append(6);
+    b.append(7);
+    b.append(3);
+    b.append(2);
+    b.append(4);
+    b.append(5);
     cout<<b.get_min()<<endl;
     cout<<b.get_max()<<endl;
     cout<<b.get_height()<<endl;
@@ -224,6 +227,6 @@ int main(){
     cout<<endl;
     b.DF_post();
     cout<<endl;
-b.delete_ele(15);
+b.delete_ele(6);
 b.BF();
 }
