@@ -1,6 +1,3 @@
-//
-// Created by DELL on 5/3/2024.
-//
 #include <iostream>
 using namespace std;
 template<class t>
@@ -8,6 +5,10 @@ class node {
 public:
     t data;
     node* next;
+    node()
+    {
+        next=nullptr;
+    }
 };
 
 template<class t>

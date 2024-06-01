@@ -70,9 +70,7 @@ public:
     }
     bool isempty()
     {   if(qsize==0)
-        {return true;
-        rare=0;
-        }
+            return true;
         else
             return false;
 

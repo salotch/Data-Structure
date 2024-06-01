@@ -1,13 +1,12 @@
-//
-// Created by DELL on 5/8/2024.
-//quick sort it is in place but sitll has space complexity O(log n)as best and
+
+//quick sort it is in place but still has space complexity O(log n)as best and
 // average case and O(n)as worst case
 // and has time complexity with best and average case O(n log n) and worst O(n2)
 #include <iostream>
 using namespace std;
 void quickSort(int*arr,int left,int right){
-    int pivot=(right+left)/2;
-    int i=left,j=right;
+    int pivot=(right+left)/2; // 9 5 20
+    int i=left,j=right;       //    pi-j i
     while(i<=j)
     {
         if(arr[pivot]>arr[i])

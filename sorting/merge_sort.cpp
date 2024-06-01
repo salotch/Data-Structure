@@ -1,6 +1,6 @@
 //
 // Created by DELL on 5/7/2024.
-//merge sort is not in place sort so it has space complexity of O(n) and
+//merge sort is not in place sort, so it has space complexity of O(n) and
 // time complexity with best and worst and average cases is O(nlog n)
 
 #include<iostream>
@@ -35,19 +35,21 @@ void merge(int *arr,int l,int m,int r)
             k++;
         }
     }
-    while(i<sl)
-    {
-        arr[k]=leftArr[i];
-        i++;
-        k++;
-    }
+
     while(j<sr)
     {   arr[k]=rightArr[j];
         j++;
         k++;
 
     }
-
+    while(i<sl)
+    {
+        arr[k]=leftArr[i];
+        i++;
+        k++;
+    }
+    delete[]leftArr;
+    delete[]rightArr;
 }
 void mergeSort(int *arr,int left, int right)
 {
@@ -56,6 +58,7 @@ void mergeSort(int *arr,int left, int right)
         int middle=left+(right-left)/2;
         mergeSort(arr,left,middle);
         mergeSort(arr,middle+1,right);
+//        cout<<left<<" "<<middle<<" "<<right<<endl;
         merge(arr,left,middle,right);
     }
 
@@ -67,7 +70,7 @@ void print(int*arr,int size){
 }
 int main()
 {
-    int arr[]={9,5,20,14,3};
-    mergeSort(arr,0,4);
-print(arr,5);
+    int arr[]={38,27,43,3,9,82,10};
+    mergeSort(arr,0,6);
+    print(arr,7);
 }
