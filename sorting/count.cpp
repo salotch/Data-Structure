@@ -3,8 +3,7 @@
 using namespace std;
 
 vector<int> count(vector<int> v) {
-    //time complexity best O(n)
-    //worst average O(n^2)
+    //time complexity in all cases O(n+k) where k is the range of the array
     vector<int> sorted(v.size()),sum(10,0);
     for (auto x:v) {
         sum[x]++;
